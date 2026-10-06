@@ -32,6 +32,6 @@ export const site: Site = {
   ],
   footer: {
     left: '© 2026 Gustavo Gomes',
-    right: 'Feito com React, energético e fé no Peixe',
+    right: 'Feito com React, energético e DNA de Menino da Vila',
   },
 }
