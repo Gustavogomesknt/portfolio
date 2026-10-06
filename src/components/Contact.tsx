@@ -2,9 +2,9 @@ import { ArrowUpRight } from 'lucide-react'
 import { site } from '../data/site'
 
 const links = [
-  { label: 'GitHub', href: site.githubUrl },
-  { label: 'LinkedIn', href: site.linkedinUrl },
-  { label: 'Currículo (PDF)', href: site.resumeUrl },
+  { label: 'GitHub', href: site.githubUrl, external: true },
+  { label: 'LinkedIn', href: site.linkedinUrl, external: true },
+  { label: 'Currículo (PDF)', href: site.resumeUrl, external: false },
 ]
 
 export function Contact() {
@@ -31,13 +31,12 @@ export function Contact() {
             <li key={link.href}>
               <a
                 href={link.href}
-                target="_blank"
-                rel="noreferrer"
+                {...(link.external ? { target: '_blank', rel: 'noreferrer' } : { download: true })}
                 className="link-sublinhado min-h-12 font-mono text-sm"
               >
                 {link.label}
                 <ArrowUpRight size={16} aria-hidden="true" />
-                <span className="sr-only">(abre em nova aba)</span>
+                {link.external && <span className="sr-only">(abre em nova aba)</span>}
               </a>
             </li>
           ))}
