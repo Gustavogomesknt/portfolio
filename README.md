@@ -2,7 +2,7 @@
 
 Portfólio pessoal de desenvolvedor full stack: página única com projetos, experiência, stack e contato.
 
-**Site:** _em breve_ <!-- TODO: trocar pela URL de produção -->
+**Site:** https://portfolio-two-inky-35.vercel.app
 
 ![Página inicial do portfólio](docs/preview.png)
 
